@@ -7,12 +7,22 @@
         Sujal's Portfolio
     </title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="Responsive.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tillana:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body class="font-roboto bg-gray-100 text-gray-900">
@@ -37,24 +47,27 @@
 
     <!-- Menu Icon (Hamburger Menu) -->
     <div id="menuIcon">
-        <i class="fas fa-bars"></i>
+        <i class="fas fa-bars Left-NAV"></i>
     </div>
 
     <!-- Responsive Navigation Menu -->
     <div id="responsiveNav">
+        <p>Hii👋<br>I'm Sujal Jaiswar <br></p>
         <a href="#home"><strong>Start</strong></a>
         <a href="#about"><strong>About</strong></a>
         <a href="#Journey"><strong>Timeline</strong></a>
         <a href="#skills"><strong>Skills</strong></a>
         <a href="#projects"><strong>Work</strong></a>
         <a href="#contact"><strong>Connect</strong></a>
-        <div id="responsiveSocials">
-            <a href="https://github.com/Sujal1145"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/sujal-jaiswar-b315a5231/"><i class="fab fa-linkedin"></i></a>
-            <a href="https://x.com/Sujal_jee_11"><i class="fab fa-twitter"></i></a>
-            <a href="Sujal's_CV.pdf"><i class="fas fa-file-alt"></i></a>
-            <a href="mailto:jaiswarsujal575@gmail.com"><i class="fas fa-envelope"></i></a>
-        </div>
+    </div>
+
+    <div id="responsiveSocials">
+        <a class="Left-NAV" href="https://github.com/Sujal1145"><i class="fab fa-github"></i></a>
+        <a class="Left-NAV" href="https://www.linkedin.com/in/sujal-jaiswar-b315a5231/"><i
+                class="fab fa-linkedin"></i></a>
+        <a class="Left-NAV" href="https://x.com/Sujal_jee_11"><i class="fa-brands fa-x-twitter "></i></a>
+        <a class="Left-NAV" href="Sujal's_CV.pdf"><i class="fas fa-file-alt"></i></a>
+        <a class="Left-NAV" href="mailto:jaiswarsujal575@gmail.com"><i class="fas fa-envelope"></i></a>
     </div>
 
     <div
@@ -92,7 +105,7 @@
         <div class="tooltip">
             <a href="https://x.com/Sujal_jee_11" target="_blank"
                 class="icon text-gray-700 hover:text-gray-900 relative z-10 bg-transparent pr-2 text-[20px] Left-NAV">
-                <i class="fab fa-twitter"></i>
+                <i class="fa-brands fa-x-twitter "></i>
             </a>
             <span class="tooltiptext">Twitter</span>
         </div>
@@ -116,7 +129,7 @@
     <section class="bg-white py-5" id="home">
         <nav class="bg-white">
             <div class="container mx-auto pb-12 flex flex-col items-center">
-                <div class="nav-item brand">
+                <div class="nav-item brand special-component">
                     <i class="nav-logo text-4xl"><img src="Berserk_logo_PNG_(5).png" alt="" width="40" height="40"></i>
                     <div class="nav-details">
                         <h3 class="text-xl font-semibold flex justify-between">
@@ -127,10 +140,9 @@
             </div>
         </nav>
         <div class="container mx-auto px-4 text-center">
-            <h1 class="text-4xl font-bold mb-4 py-2"><span class="headings">Hi, I'm a Java Developer</span></h1>
-            <p class="text-gray-700 mb-8">Together, let's build innovative and impactful Java software that makes a
-                difference.</p>
-            <img alt="A coder working on a laptop with code on the screen" class="mx-auto rounded-lg  images"
+            <h1 class="text-4xl font-bold mb-4 py-2 slide-in-animation"><span class="headings">Hi, I'm a Java Developer</span></h1>
+            <p class="text-gray-700 mb-8 fade-up-animation">Together, let's build innovative and impactful Java software that makes a difference.</p>
+            <img alt="Berserker" class="mx-auto rounded-lg images fade-up-animation"
                 height="400" src="pngwing.com.png" width="500" />
         </div>
     </section>
@@ -167,40 +179,38 @@
     </section>
 
     <!-- Journey Section -->
-    <section class="bg-white mx-auto  px-[300px] py-[100px]" id="Journey">
-        <div class="container mx-auto p-6">
-            <h1 class="text-4xl font-bold text-center mb-8"><span class="headings">Steps into Tech</span></h1>
-            <div class="relativev">
-                <div class="border-l-4 border-black absolute h-[670px] left-1/2 transform -translate-x-1/2 "></div>
+    <section class="bg-white/60 backdrop-blur-lg mx-auto px-[300px] py-[100px]" id="Journey">
+        <div class="container mx-auto">
+            <h1 class="text-5xl font-extrabold text-center mb-12 text-gray-800"><span class="headings">Steps into Tech</span></h1>
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="border-l-4 border-dotted border-gray-400 absolute h-full left-1/2 transform -translate-x-1/2"></div>
                 <div class="space-y-8 py-20">
                     <div class="flex items-center w-full timeline-item">
-                        <div class="w-1/2 text-right pr-8 border border-black p-4 rounded-lg relative">
+                        <div class="bg-white w-1/2 text-right pr-8 border border-black p-4 rounded-lg relative">
                             <h2 class="text-xl font-bold">Secondary School Completion</h2>
                             <p class="text-gray-400">Shree Sanatan Dharm Vidyalaya</p>
                             <p class="text-gray-400">May 2019 | 59.20%</p>
-                            <i
-                                class="fas fa-school absolute top-0 left-0 transform -translate-y-1/2 -translate-x-1/2 bg-white p-2 rounded-full text-black text-[40px] Left-NAV"></i>
+                            <i class="fas fa-school absolute top-0 left-0 transform -translate-y-1/2 -translate-x-1/2 bg-white p-2 rounded-full text-black text-[40px] Left-NAV"></i>
                         </div>
                     </div>
                     <div class="flex items-center w-full timeline-item">
                         <div class="relative w-1/2">
                             <!-- <div class="bg-purple-500 w-12 h-12 rounded-full absolute left-1/2 transform -translate-x-1/2 icon"></div> -->
                         </div>
-                        <div class="w-1/2 pl-8 border border-black p-4 rounded-lg relative">
+                        <div class="bg-white w-1/2 pl-8 border border-black p-4 rounded-lg relative">
                             <h2 class="text-xl font-bold">High School Completion</h2>
                             <p class="text-gray-400">National Survodya Jr.Collages</p>
                             <p class="text-gray-400">May 2021 | 73.67%</p>
-                            <i
-                                class="fas fa-graduation-cap absolute top-0 right-0 transform -translate-y-1/2 translate-x-1/2 bg-white p-2 rounded-full text-black text-[40px] Left-NAV"></i>
+                            <i class="fas fa-graduation-cap absolute top-0 right-0 transform -translate-y-1/2 translate-x-1/2 bg-white p-2 rounded-full text-black text-[40px] Left-NAV"></i>
                         </div>
                     </div>
                     <div class="flex items-center w-full timeline-item">
-                        <div class="w-1/2 text-right pr-8 border border-black p-4 rounded-lg relative">
+                        <div class="bg-white w-1/2 text-right pr-8 border border-black p-4 rounded-lg relative">
                             <h2 class="text-xl font-bold">B.Sc in Information Technology</h2>
                             <p class="text-gray-400">Mumbai University</p>
                             <p class="text-gray-400">May 2024 | CGPA: 7.9</p>
-                            <i
-                                class="fas fa-user-graduate absolute top-0 left-0 transform -translate-y-1/2 -translate-x-1/2 bg-white p-2 rounded-full text-black text-[40px] Left-NAV"></i>
+                            <i class="fas fa-user-graduate absolute top-0 left-0 transform -translate-y-1/2 -translate-x-1/2 bg-white p-2 rounded-full text-black text-[40px] Left-NAV"></i>
                         </div>
                         <!-- <div class="relative w-1/2">
                             <div class="bg-purple-500 w-12 h-12 rounded-full absolute left-1/2 transform -translate-x-1/2 icon"></div>
@@ -210,12 +220,11 @@
                         <div class="relative w-1/2">
                             <!-- <div class="bg-purple-500 w-12 h-12 rounded-full absolute left-1/2 transform -translate-x-1/2 icon"></div> -->
                         </div>
-                        <div class="w-1/2 pl-8 border border-black p-4 rounded-lg relative">
+                        <div class="bg-white w-1/2 pl-8 border border-black p-4 rounded-lg relative">
                             <h2 class="text-xl font-bold">First Job As Java Developer</h2>
                             <p class="text-gray-400">TGH PROCESS SOLUTION (P) LTD.</p>
                             <p class="text-gray-400">July 2024 - Present</p>
-                            <i
-                                class="fas fa-briefcase absolute top-0 right-0 transform -translate-y-1/2 translate-x-1/2 bg-white p-2 rounded-full text-black text-[40px] Left-NAV"></i>
+                            <i class="fas fa-briefcase absolute top-0 right-0 transform -translate-y-1/2 translate-x-1/2 bg-white p-2 rounded-full text-black text-[40px] Left-NAV"></i>
                         </div>
                     </div>
                     <!-- <div class="flex items-center w-full timeline-item">

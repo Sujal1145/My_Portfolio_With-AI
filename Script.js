@@ -27,6 +27,43 @@ document.querySelectorAll('.Left-NAV').forEach(item => {
     });
 });
 
+// Responsive Mode: Show cursor only on .Left-NAV component
+if (window.innerWidth < 768) {
+    const cursor = document.getElementById('custom-cursor');
+    const brandElements = document.querySelectorAll('.Left-NAV');
+
+    function hideCursor() {
+        cursor.style.transition = 'width 0.2s, height 0.2s, transform 0s';
+        cursor.style.width = '30px';
+        cursor.style.height = '30px';
+        cursor.style.display = 'none';
+
+        // Resume following mouse movements
+        document.addEventListener('mousemove', moveCursor);
+    }
+
+    brandElements.forEach(item => {
+        item.addEventListener('mouseenter', function () {
+            cursor.style.display = 'block';
+            
+            const rect = item.getBoundingClientRect();
+            cursor.style.transition = 'width 0.2s, height 0.2s, transform 0.2s';
+            cursor.style.width = '80px';
+            cursor.style.height = '80px';
+            cursor.style.transform = `translate(${rect.left + rect.width / 2 - 40}px, ${rect.top + rect.height / 2 - 40}px)`;
+
+            // Stop following mouse movements in responsive mode
+            document.removeEventListener('mousemove', moveCursor);
+        });
+
+        item.addEventListener('mouseleave', hideCursor);
+    });
+
+    // Hide cursor on touch or scroll
+    document.addEventListener('touchstart', hideCursor);
+    document.addEventListener('scroll', hideCursor);
+}
+
 // Skill Items
 document.querySelectorAll('.skill-item').forEach(item => {
     const icon = item.querySelector('.skill-logo'); // Target the icon inside the div
@@ -65,7 +102,7 @@ document.querySelectorAll('.headings').forEach(item => {
     });
 });
 
-// logo and Name
+// logo
 document.querySelectorAll('.brand').forEach(item => {
     item.addEventListener('mouseenter', function () {
         const cursor = document.getElementById('custom-cursor');
@@ -84,6 +121,43 @@ document.querySelectorAll('.brand').forEach(item => {
         document.addEventListener('mousemove', moveCursor);
     });
 });
+
+// Responsive Mode: Show cursor only on .brand component
+if (window.innerWidth < 768) {
+    const cursor = document.getElementById('custom-cursor');
+    const brandElements = document.querySelectorAll('.brand');
+
+    function hideCursor() {
+        cursor.style.transition = 'width 0.2s, height 0.2s, transform 0s';
+        cursor.style.width = '30px';
+        cursor.style.height = '30px';
+        cursor.style.display = 'none';
+
+        // Resume following mouse movements
+        document.addEventListener('mousemove', moveCursor);
+    }
+
+    brandElements.forEach(item => {
+        item.addEventListener('mouseenter', function () {
+            cursor.style.display = 'block';
+            
+            const rect = item.getBoundingClientRect();
+            cursor.style.transition = 'width 0.2s, height 0.2s, transform 0.2s';
+            cursor.style.width = '200px';
+            cursor.style.height = '200px';
+            cursor.style.transform = `translate(${rect.left + rect.width / 2 - 100}px, ${rect.top + rect.height / 2 - 100}px)`;
+
+            // Stop following mouse movements in responsive mode
+            document.removeEventListener('mousemove', moveCursor);
+        });
+
+        item.addEventListener('mouseleave', hideCursor);
+    });
+
+    // Hide cursor on touch or scroll
+    document.addEventListener('touchstart', hideCursor);
+    document.addEventListener('scroll', hideCursor);
+}
 
 // images
 document.querySelectorAll('.images').forEach(item => {
@@ -304,3 +378,18 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(item); // Observe each skill item
     });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
