@@ -45,7 +45,7 @@ if (window.innerWidth < 768) {
     brandElements.forEach(item => {
         item.addEventListener('mouseenter', function () {
             cursor.style.display = 'block';
-            
+
             const rect = item.getBoundingClientRect();
             cursor.style.transition = 'width 0.2s, height 0.2s, transform 0.2s';
             cursor.style.width = '80px';
@@ -140,7 +140,7 @@ if (window.innerWidth < 768) {
     brandElements.forEach(item => {
         item.addEventListener('mouseenter', function () {
             cursor.style.display = 'block';
-            
+
             const rect = item.getBoundingClientRect();
             cursor.style.transition = 'width 0.2s, height 0.2s, transform 0.2s';
             cursor.style.width = '200px';
@@ -197,7 +197,7 @@ document.querySelectorAll('.Right-NAV').forEach(item => {
 
 // --------------------------------- scroll logo animation----------------------
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const navbar = document.getElementById('navbar');
     const logo = document.getElementById('logo');
     if (window.scrollY > window.innerHeight * 0.1) {
@@ -379,6 +379,74 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// --------------------------------------image
+let slides = document.querySelectorAll('.slide');
+let currentSlide = 0;
+let slideInterval;
+
+// Function to show the current slide
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+    });
+}
+
+// Function to go to the next slide
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+// Function to go to the previous slide
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+}
+
+// Start auto-sliding
+function startAutoSlide() {
+    slideInterval = setInterval(nextSlide, 10000); // Change slide every 5 seconds
+}
+
+// Stop auto-sliding
+function stopAutoSlide() {
+    clearInterval(slideInterval);
+}
+
+// Initialize swipe functionality
+let startX = 0;
+let isDragging = false;
+
+document.querySelector('.slides-container').addEventListener('mousedown', (e) => {
+    isDragging = true;
+    startX = e.clientX;
+});
+
+document.querySelector('.slides-container').addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    let moveX = e.clientX - startX;
+    if (Math.abs(moveX) > 250) { // Minimum swipe distance
+        if (moveX > 0) {
+            prevSlide();
+        } else {
+            nextSlide();
+        }
+        isDragging = false;
+        stopAutoSlide();
+        startAutoSlide(); // Restart auto-slide after manual swipe
+    }
+});
+
+document.querySelector('.slides-container').addEventListener('mouseup', () => {
+    isDragging = false;
+});
+
+document.querySelector('.slides-container').addEventListener('mouseleave', () => {
+    isDragging = false;
+});
+
+// Start auto-slide on page load
+startAutoSlide();
 
 
 
@@ -392,4 +460,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+document.querySelectorAll('.Dark-mode').forEach(item => {
+    item.addEventListener('click', function () {
+        // Create and position the sticky circle
+        const rect = item.getBoundingClientRect();
+        const stickyCircle = document.createElement('div');
+        stickyCircle.classList.add('sticky-circle');
+        stickyCircle.style.left = `${rect.left + rect.width / 2}px`;
+        stickyCircle.style.top = `${rect.top + rect.height / 2}px`;
+        document.body.appendChild(stickyCircle);
 
+        // Trigger the animation by setting the final size after a short delay
+        setTimeout(() => {
+            stickyCircle.style.width = '16000px';
+            stickyCircle.style.height = '16000px';
+            stickyCircle.style.left = `${rect.left + rect.width / 2 - 8000}px`;
+            stickyCircle.style.top = `${rect.top + rect.height / 2 - 8000}px`;
+        }, 10);
+
+        // Apply negative effect to the image
+        const image = document.querySelector('.ME');
+        image.classList.toggle('negative-effect');
+    });
+});

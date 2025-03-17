@@ -115,6 +115,20 @@ html, body {
     z-index: 9999;
 }
 
+.sticky-circle {
+    position: fixed;
+    width: 0; /* Start with 0 width */
+    height: 0; /* Start with 0 height */
+    border-radius: 50%;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    background-color: white;
+    z-index: 9998;
+    transition: width 2s ease, height 2s ease; /* Smooth transition for growth */
+}
+.negative-effect {
+    filter: invert(1);
+}
 /* -----------------------------Right Side Nav items------------------------------- */
 
 .nav-rightSide {
@@ -300,6 +314,18 @@ html, body {
 
 
 
+.slides-container {
+    position: relative;
+}
+
+.slide {
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+    display: block;
+}
 
 
 
