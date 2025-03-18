@@ -379,7 +379,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// --------------------------------------image
+// -------------------------------------- Image Slide Left n Right -----------------------------------------------
 let slides = document.querySelectorAll('.slide');
 let currentSlide = 0;
 let slideInterval;
@@ -449,16 +449,7 @@ document.querySelector('.slides-container').addEventListener('mouseleave', () =>
 startAutoSlide();
 
 
-
-
-
-
-
-
-
-
-
-
+// ------------------------------------------------------------- Dark Mode ------------------------------------------
 
 document.querySelectorAll('.Dark-mode').forEach(item => {
     item.addEventListener('click', function () {
@@ -482,4 +473,63 @@ document.querySelectorAll('.Dark-mode').forEach(item => {
         const image = document.querySelector('.ME');
         image.classList.toggle('negative-effect');
     });
+
+    // Get elements by their IDs
+    const modeToggle = document.getElementById('mode-toggle');
+    const modeIcon = document.getElementById('mode-icon');
+    const tooltipText = document.getElementById('tooltip-text');
+
+    // Define states for light and dark mode
+    let isDarkMode = false; // Assume starting with light mode
+
+    // Toggle icon and tooltip text when clicked
+    modeToggle.addEventListener('click', () => {
+        // Set a 2-second delay (2000ms)
+        setTimeout(() => {
+            if (isDarkMode) {
+                // Switch to light mode
+                modeIcon.classList.remove('fa-sun');
+                modeIcon.classList.add('fa-moon');
+                tooltipText.textContent = 'Dark Mode'; // Tooltip text for dark mode
+            } else {
+                // Switch to dark mode
+                modeIcon.classList.remove('fa-moon');
+                modeIcon.classList.add('fa-sun');
+                tooltipText.textContent = 'Light Mode'; // Tooltip text for light mode
+            }
+
+            // Toggle the dark mode state
+            isDarkMode = !isDarkMode;
+        }, 700); // Delay for 2000 milliseconds (2 seconds)
+    });
+
+    // Get elements by their IDs
+    const modeToggleMobile = document.getElementById('mode-toggle-mobile');
+    const modeIconMobile = document.getElementById('mode-icon-mobile');
+
+    // Define states for light and dark mode
+    let isDarkModeMobile = false; // Assume starting with light mode
+
+    // Toggle icon and tooltip text when clicked
+    modeToggleMobile.addEventListener('click', () => {
+        // Set a 2-second delay (2000ms)
+        setTimeout(() => {
+            if (isDarkModeMobile) {
+                // Switch to light mode
+                modeIconMobile.classList.remove('fa-sun');
+                modeIconMobile.classList.add('fa-moon');
+            } else {
+                // Switch to dark mode
+                modeIconMobile.classList.remove('fa-moon');
+                modeIconMobile.classList.add('fa-sun');
+            }
+
+            // Toggle the dark mode state
+            isDarkModeMobile = !isDarkModeMobile;
+        }, 700); // Delay for 2000 milliseconds (2 seconds)
+    });
 });
+
+
+
+

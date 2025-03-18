@@ -7,12 +7,23 @@
     box-sizing: border-box; */
 }
 
-html, body {
+html,
+body {
     width: 100%;
     overflow-x: hidden;
 }
 
+body p, span, a, form, ul li{
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
 
+body h1, h2{
+    font-family: "Rozha One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
 /* ------------------------------------- NavBar ------------------------------------ */
 
 /* Scroll Logo */
@@ -20,14 +31,17 @@ html, body {
     transition: opacity 0.3s, transform 0.3s;
     opacity: 0;
 }
+
 .navbar-visible {
     opacity: 1;
 }
+
 .logo-slide {
     transform: translateX(1500%);
     transition: transform 0.9s, opacity 0.9s;
     opacity: 0;
 }
+
 .logo-visible {
     transform: translateX(45px);
     opacity: 1;
@@ -117,18 +131,23 @@ html, body {
 
 .sticky-circle {
     position: fixed;
-    width: 0; /* Start with 0 width */
-    height: 0; /* Start with 0 height */
+    width: 0;
+    /* Start with 0 width */
+    height: 0;
+    /* Start with 0 height */
     border-radius: 50%;
     pointer-events: none;
     mix-blend-mode: difference;
     background-color: white;
     z-index: 9998;
-    transition: width 2s ease, height 2s ease; /* Smooth transition for growth */
+    transition: width 2s ease, height 2s ease;
+    /* Smooth transition for growth */
 }
+
 .negative-effect {
     filter: invert(1);
 }
+
 /* -----------------------------Right Side Nav items------------------------------- */
 
 .nav-rightSide {
@@ -326,8 +345,3 @@ html, body {
 .slide.active {
     display: block;
 }
-
-
-
-
-

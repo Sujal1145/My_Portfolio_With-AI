@@ -373,7 +373,7 @@
 
 /* ------------------------------project section------------------- */
 
-@media screen and (max-width: 768px) {
+@media (max-width: 1024px) {
     #projects {
         padding: 50px 20px;
     }
@@ -478,9 +478,6 @@
         font-size: 30px;
         color: #333;
         transition: background 0.3s;
-        font-family: "Bellefair", serif;
-        font-weight: 400;
-        font-style: normal;
     }
 
     #responsiveNav a {
@@ -491,9 +488,6 @@
         font-size: 18px;
         color: #333;
         transition: background 0.3s;
-        font-family: "Bellefair", serif;
-        font-weight: 400;
-        font-style: normal;
     }
 
     #responsiveNav a:hover {

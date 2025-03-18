@@ -7,8 +7,8 @@
         Sujal's Portfolio
     </title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -17,13 +17,16 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
-
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tillana:wght@400;500;600;700;800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Italianno&family=Jim+Nightshade&family=Julee&family=Lancelot&family=Lavishly+Yours&family=Oswald:wght@200..700&family=Rancho&family=Rozha+One&family=Unna:ital,wght@0,400;0,700;1,400;1,700&family=Yanone+Kaffeesatz:wght@200..700&display=swap"
         rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
 </head>
 
 <body class="font-roboto bg-gray-100 text-gray-900">
@@ -31,7 +34,7 @@
     <div class="custom-cursor" id="custom-cursor"></div>
 
     <!-- Scroll Logo -->
-    <nav class="navbar fixed top-0 left-0 w-full bg-transparent p-4 flex justify-between items-center" id="navbar">
+    <nav class="navbar fixed top-0 left-0 w-full bg-transparent p-4 flex justify-between items-center" id="navbar" data-aos="fade-down" data-aos-delay="2000" data-aos-duration="1000">
         <div class="logo-slide" id="logo">
             <div class="container mx-auto pb-12 flex flex-col items-center">
                 <a href="#home">
@@ -51,7 +54,7 @@
 
     <!-- Menu Icon (Hamburger Menu) -->
     <div id="menuIcon">
-        <i class="fas fa-bars Left-NAV"></i>
+        <i class="fas fa-bars Left-NAV" data-aos="fade-left" data-aos-delay="2000" data-aos-duration="1000"></i>
     </div>
 
     <!-- Responsive Navigation Menu -->
@@ -65,81 +68,87 @@
         <a href="#contact"><strong>Connect</strong></a>
     </div>
 
-    <div id="responsiveSocials">
+    <div id="responsiveSocials" data-aos="fade-up">
         <a class="Left-NAV" href="https://github.com/Sujal1145"><i class="fab fa-github"></i></a>
         <a class="Left-NAV" href="https://www.linkedin.com/in/sujal-jaiswar-b315a5231/"><i
                 class="fab fa-linkedin"></i></a>
         <a class="Left-NAV" href="https://x.com/Sujal_jee_11"><i class="fa-brands fa-x-twitter "></i></a>
         <a class="Left-NAV" href="Sujal's_CV.pdf"><i class="fas fa-file-alt"></i></a>
         <a class="Left-NAV" href="mailto:jaiswarsujal575@gmail.com"><i class="fas fa-envelope"></i></a>
-        <a class="Left-NAV Dark-mode"><i class="fa-solid fa-circle-half-stroke"></i></a>
+        <a id="mode-toggle-mobile" class="Left-NAV Dark-mode"><i id="mode-icon-mobile" class="fa-solid fa-moon"></i></a>
     </div>
 
     <div
         class="fixed right-0 top-1/2 transform -translate-y-1/2 flex flex-col items-end space-y-4 pr-4 bg-transparent z-50">
         <a href="#home"
-            class="nav-rightSide text-gray-700 hover:text-gray-900 relative z-10 bg-transparent pr-2 Right-NAV"><strong>Start</strong></a>
+            class="nav-rightSide text-gray-700 hover:text-gray-900 relative z-10 bg-transparent pr-2 Right-NAV"
+            data-aos="fade-left" data-aos-delay="2000" data-aos-duration="1000"><strong>Start</strong></a>
         <a href="#about"
-            class="nav-rightSide text-gray-700 hover:text-gray-900 relative z-10 bg-transparent pr-2 Right-NAV"><strong>About</strong></a>
+            class="nav-rightSide text-gray-700 hover:text-gray-900 relative z-10 bg-transparent pr-2 Right-NAV"
+            data-aos="fade-left" data-aos-delay="2000" data-aos-duration="1000"><strong>About</strong></a>
         <a href="#Journey"
-            class="nav-rightSide text-gray-700 hover:text-gray-900 relative z-10 bg-transparent pr-2 Right-NAV"><strong>Timeline</strong></a>
+            class="nav-rightSide text-gray-700 hover:text-gray-900 relative z-10 bg-transparent pr-2 Right-NAV"
+            data-aos="fade-left" data-aos-delay="2000" data-aos-duration="1000"><strong>Timeline</strong></a>
         <a href="#skills"
-            class="nav-rightSide text-gray-700 hover:text-gray-900 relative z-10 bg-transparent pr-2 Right-NAV"><strong>Skills</strong></a>
+            class="nav-rightSide text-gray-700 hover:text-gray-900 relative z-10 bg-transparent pr-2 Right-NAV"
+            data-aos="fade-left" data-aos-delay="2000" data-aos-duration="1000"><strong>Skills</strong></a>
         <a href="#projects"
-            class="nav-rightSide text-gray-700 hover:text-gray-900 relative z-10 bg-transparent pr-2 Right-NAV"><strong>Work</strong></a>
+            class="nav-rightSide text-gray-700 hover:text-gray-900 relative z-10 bg-transparent pr-2 Right-NAV"
+            data-aos="fade-left" data-aos-delay="2000" data-aos-duration="1000"><strong>Work</strong></a>
         <a href="#contact"
-            class="nav-rightSide text-gray-700 hover:text-gray-900 relative z-10 bg-transparent pr-2 Right-NAV"><strong>Connect</strong></a>
+            class="nav-rightSide text-gray-700 hover:text-gray-900 relative z-10 bg-transparent pr-2 Right-NAV"
+            data-aos="fade-left" data-aos-delay="2000" data-aos-duration="1000"><strong>Connect</strong></a>
     </div>
 
     <div
         class="fixed left-0 top-1/2 transform -translate-y-1/2 flex flex-col items-start space-y-4 pl-4 bg-transparent z-50">
-        <div class="tooltip">
+        <div class="tooltip" data-aos="fade-right" data-aos-delay="2000" data-aos-duration="1000">
             <a href="https://github.com/Sujal1145" target="_blank"
                 class="icon text-gray-700 hover:text-gray-900 relative z-10 bg-transparent pr-2 text-[20px] Left-NAV">
                 <i class="fab fa-github"></i>
             </a>
             <span class="tooltiptext">GitHub</span>
         </div>
-        <div class="tooltip">
+        <div class="tooltip" data-aos="fade-right" data-aos-delay="2000" data-aos-duration="1000">
             <a href="https://www.linkedin.com/in/sujal-jaiswar-b315a5231/" target="_blank"
                 class="icon text-gray-700 hover:text-gray-900 relative z-10 bg-transparent pr-2 text-[20px] Left-NAV">
                 <i class="fab fa-linkedin"></i>
             </a>
             <span class="tooltiptext">LinkedIn</span>
         </div>
-        <div class="tooltip">
+        <div class="tooltip" data-aos="fade-right" data-aos-delay="2000" data-aos-duration="1000">
             <a href="https://x.com/Sujal_jee_11" target="_blank"
                 class="icon text-gray-700 hover:text-gray-900 relative z-10 bg-transparent pr-2 text-[20px] Left-NAV">
                 <i class="fa-brands fa-x-twitter "></i>
             </a>
             <span class="tooltiptext">Twitter</span>
         </div>
-        <div class="tooltip">
+        <div class="tooltip" data-aos="fade-right" data-aos-delay="2000" data-aos-duration="1000">
             <a href="Sujal's_CV.pdf" target="_blank"
                 class="icon text-gray-700 hover:text-gray-900 relative z-10 bg-transparent pr-2 text-[20px] Left-NAV">
                 <i class="fas fa-file-alt"></i>
             </a>
             <span class="tooltiptext">Resume</span>
         </div>
-        <div class="tooltip">
+        <div class="tooltip" data-aos="fade-right" data-aos-delay="2000" data-aos-duration="1000">
             <a href="mailto:jaiswarsujal575@gmail.com" target="_blank"
                 class="icon text-gray-700 hover:text-gray-900 relative z-10 bg-transparent pr-2 text-[20px] Left-NAV">
                 <i class="fas fa-envelope"></i>
             </a>
             <span class="tooltiptext">Email</span>
         </div>
-        <div class="tooltip">
-            <a
-                class="icon text-gray-700 hover:text-gray-900 relative z-10 bg-transparent pr-2 text-[20px] Left-NAV Dark-mode">
-                <i class="fa-solid fa-circle-half-stroke"></i>
+        <div class="tooltip" data-aos="fade-right" data-aos-delay="2000" data-aos-duration="1000">
+            <a id="mode-toggle" class="icon text-gray-700 hover:text-gray-900 relative z-10 bg-transparent pr-2 text-[20px] Left-NAV Dark-mode">
+                <i id="mode-icon" class="fa-solid fa-moon"></i>
             </a>
-            <span class="tooltiptext">Dark/Light Mode</span>
+            <span id="tooltip-text" class="tooltiptext">Dark Mode</span>
         </div>
+        
     </div>
 
     <!-- Hero Section -->
     <section class="bg-white py-5" id="home">
-        <nav class="bg-white">
+        <nav class="bg-white" data-aos="fade-down" data-aos-delay="2000" data-aos-duration="1000">
             <div class="container mx-auto pb-12 flex flex-col items-center">
                 <div class="nav-item brand special-component">
                     <i class="nav-logo text-4xl"><img src="Berserk_logo_PNG_(5).png" alt="" width="40" height="40"></i>
@@ -177,16 +186,20 @@
             </div> -->
             <div class="slide">
                 <div class="container mx-auto px-4 text-center">
-                    <h1 class="text-4xl font-bold mb-4 py-2 slide-in-animation"><span class="headings">Hi, I'm a Sujal Jaiswar</span></h1>
-                    <p class="text-gray-700 mb-8 fade-up-animation">I believe growth comes from pushing limits, both in technology and life.</p>
+                    <h1 class="text-4xl font-bold mb-4 py-2 slide-in-animation"><span class="headings">Hi, I'm Sujal
+                            Jaiswar</span></h1>
+                    <p class="text-gray-700 mb-8 fade-up-animation">I believe growth comes from pushing limits, both in
+                        technology and life.</p>
                     <img alt="Berserker" class="mx-auto rounded-lg images fade-up-animation" height="400"
                         src="Griffith.png" width="500" />
                 </div>
             </div>
             <div class="slide">
                 <div class="container mx-auto px-4 text-center">
-                    <h1 class="text-4xl font-bold mb-4 py-2 slide-in-animation"><span class="headings">Hi, I'm a Lazy Person</span></h1>
-                    <p class="text-gray-700 mb-8 fade-up-animation">I built this by taking help of AI tools, it took one month to finish.</p>
+                    <h1 class="text-4xl font-bold mb-4 py-2 slide-in-animation"><span class="headings">Hi, I'm a Lazy
+                            Person</span></h1>
+                    <p class="text-gray-700 mb-8 fade-up-animation">I built this by taking help of AI tools, it took one
+                        month to finish.</p>
                     <img alt="Berserker" class="mx-auto rounded-lg images fade-up-animation py-[50px]" height="400"
                         src="Skull.png" width="500" />
                 </div>
@@ -196,7 +209,7 @@
 
     <!-- About Section -->
     <section class="container mx-auto py-[200px] px-[100px] flex flex-col md:flex-row items-center" id="about">
-        <div class="w-full md:w-1/2 p-6">
+        <div class="w-full md:w-1/2 p-6" data-aos="fade-right" data-aos-duration="2000">
             <h1 class="text-4xl font-bold text-gray-800 mb-4"><span class="headings">Know Me!!</span></h1>
             <p class="text-lg text-gray-700 mb-4">
                 Hi, I'm Sujal Jaiswar, a passionate Software Developer with a keen interest in Java, MySQL, Maven, and
@@ -219,7 +232,7 @@
                 Let's connect and create something amazing together!
             </p> -->
         </div>
-        <div class="w-full md:w-1/2 p-1 flex justify-center">
+        <div class="w-full md:w-1/2 p-1 flex justify-center" data-aos="fade-left" data-aos-duration="2000">
             <img height="400" src="file.png" width="400" class="images ME" />
         </div>
     </section>
@@ -309,8 +322,8 @@
     </section>
 
     <!-- Skills Section -->
-    <section class="max-w-4xl py-[150px] mx-auto p-8    " id="skills">
-        <h2 class="text-3xl font-bold mb-6 text-center"><span class="headings">Coding Expertise</span></h2>
+    <section class="max-w-4xl py-[150px] mx-auto p-8s" id="skills">
+        <h1 class="text-3xl font-bold mb-6 text-center"><span class="headings">Coding Expertise</span></h1>
         <div class="grid grid-cols-1 sm:grid-cols-2 py-[100px] md:grid-cols-3 gap-20">
             <div class="skill-item">
                 <i class="fab fa-html5 skill-logo text-4xl"></i>
@@ -427,8 +440,9 @@
 
     <!-- Projects Section -->
     <section class="bg-white p-[150px]  mx-auto p-12" id="projects">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-8"><span class="headings">True Efforts</span></h2>
+        <div class="container mx-auto px-4" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+            data-aos-delay="300" data-aos-duration="600" data-aos-offset="300">
+            <h1 class="text-3xl font-bold text-center mb-8"><span class="headings">True Efforts</span></h1>
             <div class="flex flex-col md:flex-row py-[10px]">
                 <div class="w-full md:w-[300px] bg-white p-4 mb-4 md:mb-0">
                     <ul class="">
@@ -475,9 +489,9 @@
                         <img alt="Project 1: A modern office building with glass windows and a sleek design"
                             class="w-full h-48 object-cover mb-4 images" height="400" src="HomeCoachBG.jpg"
                             width="600" />
-                        <h3 class="text-xl font-semibold mb-2">
+                        <h2 class="text-xl font-semibold mb-2">
                             HomeCoach Website
-                        </h3>
+                        </h2>
                         <p class="text-gray-600 mb-4">
                             During my final year, I developed the HomeCoach website, a platform designed to help users
                             find workout videos tailored to their needs. Users can select a specific body part and
@@ -494,9 +508,9 @@
                     <div id="project2" class="project-details hidden">
                         <img alt="Project 2: A classic residential house with a large garden and traditional architecture"
                             class="w-full h-48 object-cover mb-4 images" height="400" src="codesoft.png" width="600" />
-                        <h3 class="text-xl font-semibold mb-2">
+                        <h2 class="text-xl font-semibold mb-2">
                             Projects at CodSoft Internship
-                        </h3>
+                        </h2>
                         <p class="text-gray-600 mb-4">
                             During my online internship at CodSoft, I successfully completed three projects using HTML,
                             CSS, and JavaScript. These include a Calculator with a sleek design and essential arithmetic
@@ -512,9 +526,9 @@
                     <div id="project3" class="project-details hidden">
                         <img alt="Project 3: A modern shopping mall with multiple floors and a contemporary design"
                             class="w-full h-48 object-cover mb-4 images" src="CAFirmLogo.png" width="10%" />
-                        <h3 class="text-xl font-semibold mb-2">
+                        <h2 class="text-xl font-semibold mb-2">
                             TGHCA.in - Professional Responsive Website
-                        </h3>
+                        </h2>
                         <p class="text-gray-600 mb-4">
                             I designed and developed a professional, responsive website, TGHCA.in, using HTML, CSS, and
                             JavaScript. The website was tailored to effectively showcase the company’s services and
@@ -531,9 +545,9 @@
                         <img alt="Project 4: A classic library building with a grand entrance and traditional design"
                             class="w-full h-48 object-cover mb-4 images" height="400" src="Lendingkart-.png"
                             width="600" />
-                        <h3 class="text-xl font-semibold mb-2">
+                        <h2 class="text-xl font-semibold mb-2">
                             LendingKart Software
-                        </h3>
+                        </h2>
                         <p class="text-gray-600 mb-4">
                             Collaborated with a team to develop a Java Swing and MySQL-based software tailored for CA
                             firms to handle large-scale data calculations and storage. The software streamlined data
@@ -549,9 +563,9 @@
                         <img alt="Project 5: A modern tech park with innovative architecture and green spaces"
                             class="w-full h-48 object-cover mb-4 images" height="400" src="Bank_-Reconciliation.png"
                             width="600" />
-                        <h3 class="text-xl font-semibold mb-2">
+                        <h2 class="text-xl font-semibold mb-2">
                             Reconsilation Software
-                        </h3>
+                        </h2>
                         <p class="text-gray-600 mb-4">
                             Independently created a software tool to compare columns or tables in Excel files,
                             identifying discrepancies between internal and client data. The software supports multiple
@@ -566,9 +580,9 @@
                     <div id="project6" class="project-details hidden">
                         <img alt="Project 6: A classic museum with historical exhibits and traditional design"
                             class="w-full h-48 object-cover mb-4 images" height="400" src="TCS.jpg" width="600" />
-                        <h3 class="text-xl font-semibold mb-2">
+                        <h2 class="text-xl font-semibold mb-2">
                             Automated TCS Report Generator
-                        </h3>
+                        </h2>
                         <p class="text-gray-600 mb-4">
                             Developed a tool using Apache POI and Selenium to automate TCS report creation and
                             streamline the ITR reporting process. The software processes user-uploaded files, applies
@@ -589,7 +603,7 @@
     <!-- Contact Section -->
     <section class="mx-auto" id="contact">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-[200px]">
-            <div class="flex flex-col justify-center">
+            <div class="flex flex-col justify-center" data-aos="fade-right" data-aos-duration="2000">
                 <h1 class="text-4xl font-bold text-black mb-4"><span class="headings">Let's Talk!</span></h1>
                 <p class="text-lg text-gray-400 mb-6">
                     I'm here for a good conversation or to answer any questions you might have. Let's talk!
@@ -634,7 +648,7 @@
                     </div>
                 </form>
             </div>
-            <div class="flex items-center justify-center">
+            <div class="flex items-center justify-center" data-aos="fade-left" data-aos-duration="2000">
                 <img class="images" height="400" src="pngegg.png" width="400" />
             </div>
         </div>
@@ -649,6 +663,9 @@
     </section>
 
     <script src="Script.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
